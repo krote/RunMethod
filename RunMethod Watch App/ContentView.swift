@@ -9,33 +9,49 @@ import SwiftUI
 
 struct ContentView: View {
     var isStarted: Bool = false
-    var elapsedTime: Double = 0.0
+    @ObservedObject var excerciseManager = ExcerciseManager()
+
     var body: some View {
         VStack {
-            Text("")
-            if isStarted == false {
+            Text(String(format: "%.1f", excerciseManager.secondElapsed))
+            
+            Spacer()
+            
+            if excerciseManager.status == .stop {
                 Image(systemName: "play")
                     .imageScale(.large)
                     .foregroundColor(.accentColor)
+                    .onTapGesture {
+                        excerciseManager.startExcercise()
+                    }
                 Text("Start")
+            }else if excerciseManager.status == .pause{
+                HStack{
+                    Image(systemName: "play")
+                        .onTapGesture {
+                            excerciseManager.startExcercise()
+                        }
+                    Image(systemName: "stop")
+                        .onTapGesture {
+                            excerciseManager.stopExcercise()
+                        }
+                }
             }else{
-                Image(systemName: "stop")
+                // status == start
+                Image(systemName: "pause")
+                    .onTapGesture {
+                        excerciseManager.pauseExcercise()
+                    }
                 Text("Stop!")
             }
         }
         .padding()
     }
     
-    func tappedStart(){
-        Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { (timer) in
-            self.elapsedTime += 0.01
-            self.isStarted = true
-        }
-    }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(isStarted: false, elapsedTime: 0)
+        ContentView(isStarted: false)
     }
 }

@@ -24,6 +24,7 @@
 		F1D64D982A8A6AF90001014D /* RunMethod_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D64D972A8A6AF90001014D /* RunMethod_Watch_AppUITestsLaunchTests.swift */; };
 		F1D64DB02A8A70500001014D /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D64DAF2A8A70500001014D /* UserData.swift */; };
 		F1D64DB22A8A70E40001014D /* ExerciseLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D64DB12A8A70E40001014D /* ExerciseLog.swift */; };
+		F1D64DB42A8D0F060001014D /* ExcerciseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D64DB32A8D0F060001014D /* ExcerciseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		F1D64D972A8A6AF90001014D /* RunMethod_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunMethod_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F1D64DAF2A8A70500001014D /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		F1D64DB12A8A70E40001014D /* ExerciseLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseLog.swift; sourceTree = "<group>"; };
+		F1D64DB32A8D0F060001014D /* ExcerciseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcerciseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +255,7 @@
 			children = (
 				F1D64DAF2A8A70500001014D /* UserData.swift */,
 				F1D64DB12A8A70E40001014D /* ExerciseLog.swift */,
+				F1D64DB32A8D0F060001014D /* ExcerciseManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1D64DB02A8A70500001014D /* UserData.swift in Sources */,
+				F1D64DB42A8D0F060001014D /* ExcerciseManager.swift in Sources */,
 				F1D64D7D2A8A6AF80001014D /* ContentView.swift in Sources */,
 				F1D64DB22A8A70E40001014D /* ExerciseLog.swift in Sources */,
 				F1D64D7B2A8A6AF80001014D /* RunMethodApp.swift in Sources */,
