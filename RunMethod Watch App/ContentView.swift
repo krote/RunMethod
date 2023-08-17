@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    var isStarted: Bool = false
     @ObservedObject var excerciseManager = ExcerciseManager()
 
     var body: some View {
         VStack {
-            Text(String(format: "%.1f", excerciseManager.secondElapsed))
+            Text(String(format: "%.2f", excerciseManager.secondElapsed))
             
             Spacer()
             
@@ -42,7 +41,7 @@ struct ContentView: View {
                     .onTapGesture {
                         excerciseManager.pauseExcercise()
                     }
-                Text("Stop!")
+                Text("Pause!")
             }
         }
         .padding()
@@ -52,6 +51,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(isStarted: false)
+        ContentView()
     }
 }

@@ -11,7 +11,7 @@ import SwiftUI
 struct RunMethod_Watch_AppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(isStarted: false)
+            ContentView()
         }
     }
 }
