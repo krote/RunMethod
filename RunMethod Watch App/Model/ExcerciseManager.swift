@@ -7,11 +7,21 @@
 
 import SwiftUI
 
-class ExcerciseManager: ObservableObject{
+class ExcerciseManager: NSObject, ObservableObject{
     @Published var secondElapsed = 0.0
     @Published var status: exerciseStatus = .stop
     var timer = Timer()
+    var locationManager: CLLocationManager?
     
+    override init(){
+        super.init()
+
+        locationManager = CLLocationManager()
+        locationManager!.delegate = self
+        locationManager!.requestWhenInUseAuthorization()
+
+    }
+
     enum exerciseStatus{
         case start
         case stop
@@ -34,6 +44,12 @@ class ExcerciseManager: ObservableObject{
         status = .stop
         timer.invalidate()
         secondElapsed = 0
+    }
+}
+
+extension ExcerciseManager: CLLocationManagerDelegate{
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        //
     }
 }
 
