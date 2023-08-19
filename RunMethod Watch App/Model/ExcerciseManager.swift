@@ -51,5 +51,13 @@ extension ExcerciseManager: CLLocationManagerDelegate{
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         //
     }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        //
+        var cnt = locations.count
+        if let newLocation = locations.last{
+            print("\(newLocation.coordinate.latitude), \(newLocation.coordinate.longitude)")
+        }
+    }
 }
 
