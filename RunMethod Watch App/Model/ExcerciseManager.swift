@@ -12,11 +12,15 @@ class ExcerciseManager: NSObject, ObservableObject{
     @Published var status: exerciseStatus = .stop
     var timer = Timer()
     var locationManager: CLLocationManager?
+    var locationLogs:[CLLocation] = []
     
     override init(){
         super.init()
 
         locationManager = CLLocationManager()
+        locationManager!.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+        locationManager!.distanceFilter = 5
+        
         locationManager!.delegate = self
         locationManager!.requestWhenInUseAuthorization()
 
@@ -30,6 +34,7 @@ class ExcerciseManager: NSObject, ObservableObject{
     
     func startExcercise(){
         status = .start
+        locationLogs.removeAll()
         timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true){ timer in
             self.secondElapsed += 0.01
         }
@@ -45,6 +50,7 @@ class ExcerciseManager: NSObject, ObservableObject{
         timer.invalidate()
         secondElapsed = 0
     }
+    
 }
 
 extension ExcerciseManager: CLLocationManagerDelegate{
@@ -56,6 +62,7 @@ extension ExcerciseManager: CLLocationManagerDelegate{
         //
         var cnt = locations.count
         if let newLocation = locations.last{
+            locationLogs.append(newLocation)
             print("\(newLocation.coordinate.latitude), \(newLocation.coordinate.longitude)")
         }
     }
