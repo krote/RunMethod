@@ -22,10 +22,10 @@ class ExcerciseManager: NSObject, ObservableObject{
         locationManager = CLLocationManager()
         locationManager!.desiredAccuracy = kCLLocationAccuracyBestForNavigation
         locationManager!.distanceFilter = 5
-        
+
         locationManager!.delegate = self
         locationManager!.requestWhenInUseAuthorization()
-        locationManager?.allowsBackgroundLocationUpdates = true
+        locationManager!.allowsBackgroundLocationUpdates = true
 
     }
 

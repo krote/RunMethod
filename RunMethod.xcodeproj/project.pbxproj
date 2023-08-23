@@ -103,6 +103,7 @@
 		F1D64DAF2A8A70500001014D /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		F1D64DB12A8A70E40001014D /* ExerciseLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseLog.swift; sourceTree = "<group>"; };
 		F1D64DB32A8D0F060001014D /* ExcerciseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcerciseManager.swift; sourceTree = "<group>"; };
+		F1DB2FEF2A964E2A007F7686 /* RunMethod-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "RunMethod-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +217,7 @@
 		F1D64D792A8A6AF80001014D /* RunMethod Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				F1DB2FEF2A964E2A007F7686 /* RunMethod-Watch-App-Info.plist */,
 				F1D64DAE2A8A6FF90001014D /* Model */,
 				F1D64D7A2A8A6AF80001014D /* RunMethodApp.swift */,
 				F1D64D7C2A8A6AF80001014D /* ContentView.swift */,
@@ -683,6 +685,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"RunMethod Watch App/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "RunMethod-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = RunMethod;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.kaerugekogeko.RunMethod;
@@ -712,6 +715,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"RunMethod Watch App/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "RunMethod-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = RunMethod;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.kaerugekogeko.RunMethod;
