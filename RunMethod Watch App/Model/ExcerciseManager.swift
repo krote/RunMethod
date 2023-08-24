@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreMotion
 
 class ExcerciseManager: NSObject, ObservableObject{
     @Published var secondElapsed = 0.0
@@ -13,6 +14,9 @@ class ExcerciseManager: NSObject, ObservableObject{
     var timer = Timer()
     var locationManager: CLLocationManager?
     var locationLogs:[CLLocation] = []
+    
+    private let motionManager = CMMotionManager()
+    private let vibrationTimer: Timer?
     
     override init(){
         super.init()
@@ -27,6 +31,7 @@ class ExcerciseManager: NSObject, ObservableObject{
         locationManager!.requestWhenInUseAuthorization()
         locationManager!.allowsBackgroundLocationUpdates = true
 
+        
     }
 
     enum exerciseStatus{
