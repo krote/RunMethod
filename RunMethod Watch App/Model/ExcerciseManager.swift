@@ -59,6 +59,35 @@ class ExcerciseManager: NSObject, ObservableObject{
         secondElapsed = 0
     }
     
+    private func startMonitoringMotion(){
+        if motionManager.isDeviceMotionAvailable {
+            motionManager.deviceMotionUpdateInterval = 0.5
+            motionManager.startDeviceMotionUpdates(to: .main) {[weak self] (data, error) in
+                guard let data = data else {return}
+                let threshold: Double = 0.1
+                let userAcceleration = data.userAcceleration
+                if abs(userAcceleration.x) > threshold || abs(userAcceleration.y) > threshold || abs(userAcceleration.z) > threshold {
+                    self?.startVibration()
+                }
+            }
+        }
+    }
+    
+    private func stopMonitoringMotion(){
+        if motionManager.isDeviceMotionActive{
+            motionManager.stopDeviceMotionUpdates()
+            stopVibration()
+        }
+    }
+    
+    func startVibration(){
+        
+    }
+    
+    func stopVibration(){
+        
+    }
+    
 }
 
 extension ExcerciseManager: CLLocationManagerDelegate{
