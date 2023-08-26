@@ -16,7 +16,6 @@ class ExcerciseManager: NSObject, ObservableObject{
     var locationLogs:[CLLocation] = []
     
     private let motionManager = CMMotionManager()
-    private let vibrationTimer: Timer?
     
     override init(){
         super.init()
@@ -40,14 +39,25 @@ class ExcerciseManager: NSObject, ObservableObject{
         case pause
     }
     
+    /// 運動の開始
     func startExcercise(){
         status = .start
-        locationLogs.removeAll()
+        
+        // 運動時間の記録
         timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true){ timer in
             self.secondElapsed += 0.01
         }
+
+        // 位置情報に関する初期処理
+        locationLogs.removeAll()
+        
+        // デバイスのモーションセンサー値取得に関する処理
+        startMonitoringMotion()
     }
 
+    /// 運動の一時停止処理
+    /// Description
+    /// 
     func pauseExcercise(){
         status = .pause
         timer.invalidate()
@@ -57,8 +67,12 @@ class ExcerciseManager: NSObject, ObservableObject{
         status = .stop
         timer.invalidate()
         secondElapsed = 0
+        
+        // モーションセンサー終了処理
+        stopMonitoringMotion()
     }
-    
+
+    // MotionManagerに関する初期処理
     private func startMonitoringMotion(){
         if motionManager.isDeviceMotionAvailable {
             motionManager.deviceMotionUpdateInterval = 0.5
