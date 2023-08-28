@@ -17,6 +17,13 @@ class ExcerciseManager: NSObject, ObservableObject{
     
     private let motionManager = CMMotionManager()
     
+    struct motion_point{
+        var location_x: Double
+        var location_y: Double
+        var location_z: Double
+    }
+    var motionPoints: [motion_point] = []
+    
     override init(){
         super.init()
 
@@ -81,7 +88,7 @@ class ExcerciseManager: NSObject, ObservableObject{
                 let threshold: Double = 0.1
                 let userAcceleration = data.userAcceleration
                 if abs(userAcceleration.x) > threshold || abs(userAcceleration.y) > threshold || abs(userAcceleration.z) > threshold {
-                    self?.startVibration()
+                    self?.motionPoints.append(motion_point(location_x: userAcceleration.x, location_y: userAcceleration.y, location_z: userAcceleration.z))
                 }
             }
         }
@@ -90,7 +97,6 @@ class ExcerciseManager: NSObject, ObservableObject{
     private func stopMonitoringMotion(){
         if motionManager.isDeviceMotionActive{
             motionManager.stopDeviceMotionUpdates()
-            stopVibration()
         }
     }
     
