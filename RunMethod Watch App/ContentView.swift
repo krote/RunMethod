@@ -17,13 +17,26 @@ struct ContentView: View {
             Spacer()
             
             if excerciseManager.status == .stop {
-                Image(systemName: "play")
-                    .imageScale(.large)
-                    .foregroundColor(.accentColor)
-                    .onTapGesture {
-                        excerciseManager.startExcercise()
+                HStack{
+                    VStack{
+                        Image(systemName: "play")
+                            .imageScale(.large)
+                            .foregroundColor(.accentColor)
+                            .onTapGesture {
+                                excerciseManager.startExcercise()
+                            }
+                        Text("Start")
                     }
-                Text("Start")
+                    VStack{
+                        Image(systemName: "square.and.arrow.down")
+                            .imageScale(.large)
+                            .foregroundColor(.accentColor)
+                            .onTapGesture{
+//
+                            }
+                        Text("Save")
+                    }
+                }
             }else if excerciseManager.status == .pause{
                 HStack{
                     Image(systemName: "play")
