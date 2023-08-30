@@ -32,7 +32,7 @@ struct ContentView: View {
                             .imageScale(.large)
                             .foregroundColor(.accentColor)
                             .onTapGesture{
-//
+                                excerciseManager.saveResult()
                             }
                         Text("Save")
                     }
