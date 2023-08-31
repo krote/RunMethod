@@ -12,7 +12,10 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
+            Spacer()
             Text(String(format: "%.2f", excerciseManager.secondElapsed))
+                .fontWeight(.bold)
+                .font(.largeTitle)
             
             Spacer()
             
@@ -26,6 +29,7 @@ struct ContentView: View {
                                 excerciseManager.startExcercise()
                             }
                         Text("Start")
+                            .fontWeight(.heavy)
                     }
                     VStack{
                         Image(systemName: "square.and.arrow.down")
@@ -35,6 +39,7 @@ struct ContentView: View {
                                 excerciseManager.saveResult()
                             }
                         Text("Save")
+                            .fontWeight(.heavy)
                     }
                 }
             }else if excerciseManager.status == .pause{
