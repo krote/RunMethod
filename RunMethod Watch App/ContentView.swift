@@ -28,6 +28,7 @@ struct ContentView: View {
                             .onTapGesture {
                                 excerciseManager.startExcercise()
                             }
+                            .frame(height: 30)
                         Text("Start")
                             .fontWeight(.heavy)
                     }
@@ -38,6 +39,7 @@ struct ContentView: View {
                             .onTapGesture{
                                 excerciseManager.saveResult()
                             }
+                            .frame(height: 30)
                         Text("Save")
                             .fontWeight(.heavy)
                     }
