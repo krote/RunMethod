@@ -32,6 +32,20 @@ struct ContentView: View {
                         Text("Start")
                             .fontWeight(.heavy)
                     }
+                }
+            }else if excerciseManager.status == .pause{
+                HStack{
+                    VStack{
+                        Image(systemName: "play")
+                            .onTapGesture {
+                                excerciseManager.startExcercise()
+                            }
+                            .imageScale(.large)
+                            .foregroundColor(.accentColor)
+                            .frame(height: 30)
+                        Text("Resume")
+                            .fontWeight(.heavy)
+                    }
                     VStack{
                         Image(systemName: "square.and.arrow.down")
                             .imageScale(.large)
@@ -44,23 +58,15 @@ struct ContentView: View {
                             .fontWeight(.heavy)
                     }
                 }
-            }else if excerciseManager.status == .pause{
-                HStack{
-                    Image(systemName: "play")
-                        .onTapGesture {
-                            excerciseManager.startExcercise()
-                        }
-                    Image(systemName: "stop")
-                        .onTapGesture {
-                            excerciseManager.stopExcercise()
-                        }
-                }
             }else{
                 // status == start
                 Image(systemName: "pause")
                     .onTapGesture {
                         excerciseManager.pauseExcercise()
                     }
+                    .imageScale(.large)
+                    .foregroundColor(.accentColor)
+                    .frame(height: 30)
                 Text("Pause!")
             }
         }
