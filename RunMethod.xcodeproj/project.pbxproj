@@ -25,6 +25,8 @@
 		F1D64DB02A8A70500001014D /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D64DAF2A8A70500001014D /* UserData.swift */; };
 		F1D64DB22A8A70E40001014D /* ExerciseLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D64DB12A8A70E40001014D /* ExerciseLog.swift */; };
 		F1D64DB42A8D0F060001014D /* ExcerciseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D64DB32A8D0F060001014D /* ExcerciseManager.swift */; };
+		F1DB2FF22AA4D365007F7686 /* ExecExcerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DB2FF12AA4D365007F7686 /* ExecExcerciseView.swift */; };
+		F1DB2FF42AA4D540007F7686 /* ShowExcerciseLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DB2FF32AA4D540007F7686 /* ShowExcerciseLogView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,8 @@
 		F1D64DB12A8A70E40001014D /* ExerciseLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseLog.swift; sourceTree = "<group>"; };
 		F1D64DB32A8D0F060001014D /* ExcerciseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcerciseManager.swift; sourceTree = "<group>"; };
 		F1DB2FEF2A964E2A007F7686 /* RunMethod-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "RunMethod-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		F1DB2FF12AA4D365007F7686 /* ExecExcerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecExcerciseView.swift; sourceTree = "<group>"; };
+		F1DB2FF32AA4D540007F7686 /* ShowExcerciseLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowExcerciseLogView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +221,7 @@
 		F1D64D792A8A6AF80001014D /* RunMethod Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				F1DB2FF02AA4D314007F7686 /* VIEW */,
 				F1DB2FEF2A964E2A007F7686 /* RunMethod-Watch-App-Info.plist */,
 				F1D64DAE2A8A6FF90001014D /* Model */,
 				F1D64D7A2A8A6AF80001014D /* RunMethodApp.swift */,
@@ -260,6 +265,15 @@
 				F1D64DB32A8D0F060001014D /* ExcerciseManager.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F1DB2FF02AA4D314007F7686 /* VIEW */ = {
+			isa = PBXGroup;
+			children = (
+				F1DB2FF12AA4D365007F7686 /* ExecExcerciseView.swift */,
+				F1DB2FF32AA4D540007F7686 /* ShowExcerciseLogView.swift */,
+			);
+			path = VIEW;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -511,10 +525,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1D64DB02A8A70500001014D /* UserData.swift in Sources */,
+				F1DB2FF42AA4D540007F7686 /* ShowExcerciseLogView.swift in Sources */,
 				F1D64DB42A8D0F060001014D /* ExcerciseManager.swift in Sources */,
 				F1D64D7D2A8A6AF80001014D /* ContentView.swift in Sources */,
 				F1D64DB22A8A70E40001014D /* ExerciseLog.swift in Sources */,
 				F1D64D7B2A8A6AF80001014D /* RunMethodApp.swift in Sources */,
+				F1DB2FF22AA4D365007F7686 /* ExecExcerciseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
