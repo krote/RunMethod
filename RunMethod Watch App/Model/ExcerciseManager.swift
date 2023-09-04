@@ -16,7 +16,7 @@ class ExcerciseManager: NSObject, ObservableObject{
     var locationLogs:[CLLocation] = []
     
     private let motionManager = CMMotionManager()
-    
+    //var excerciseLog: ExcerciseLog
     struct motion_point{
         var timeElapsed: Double
         var location_x: Double

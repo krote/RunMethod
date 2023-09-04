@@ -23,7 +23,7 @@
 		F1D64D962A8A6AF90001014D /* RunMethod_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D64D952A8A6AF90001014D /* RunMethod_Watch_AppUITests.swift */; };
 		F1D64D982A8A6AF90001014D /* RunMethod_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D64D972A8A6AF90001014D /* RunMethod_Watch_AppUITestsLaunchTests.swift */; };
 		F1D64DB02A8A70500001014D /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D64DAF2A8A70500001014D /* UserData.swift */; };
-		F1D64DB22A8A70E40001014D /* ExerciseLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D64DB12A8A70E40001014D /* ExerciseLog.swift */; };
+		F1D64DB22A8A70E40001014D /* ExcerciseLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D64DB12A8A70E40001014D /* ExcerciseLog.swift */; };
 		F1D64DB42A8D0F060001014D /* ExcerciseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D64DB32A8D0F060001014D /* ExcerciseManager.swift */; };
 		F1DB2FF22AA4D365007F7686 /* ExecExcerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DB2FF12AA4D365007F7686 /* ExecExcerciseView.swift */; };
 		F1DB2FF42AA4D540007F7686 /* ShowExcerciseLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DB2FF32AA4D540007F7686 /* ShowExcerciseLogView.swift */; };
@@ -103,7 +103,7 @@
 		F1D64D952A8A6AF90001014D /* RunMethod_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunMethod_Watch_AppUITests.swift; sourceTree = "<group>"; };
 		F1D64D972A8A6AF90001014D /* RunMethod_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunMethod_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F1D64DAF2A8A70500001014D /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
-		F1D64DB12A8A70E40001014D /* ExerciseLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseLog.swift; sourceTree = "<group>"; };
+		F1D64DB12A8A70E40001014D /* ExcerciseLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcerciseLog.swift; sourceTree = "<group>"; };
 		F1D64DB32A8D0F060001014D /* ExcerciseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcerciseManager.swift; sourceTree = "<group>"; };
 		F1DB2FEF2A964E2A007F7686 /* RunMethod-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "RunMethod-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		F1DB2FF12AA4D365007F7686 /* ExecExcerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecExcerciseView.swift; sourceTree = "<group>"; };
@@ -261,7 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				F1D64DAF2A8A70500001014D /* UserData.swift */,
-				F1D64DB12A8A70E40001014D /* ExerciseLog.swift */,
+				F1D64DB12A8A70E40001014D /* ExcerciseLog.swift */,
 				F1D64DB32A8D0F060001014D /* ExcerciseManager.swift */,
 			);
 			path = Model;
@@ -528,7 +528,7 @@
 				F1DB2FF42AA4D540007F7686 /* ShowExcerciseLogView.swift in Sources */,
 				F1D64DB42A8D0F060001014D /* ExcerciseManager.swift in Sources */,
 				F1D64D7D2A8A6AF80001014D /* ContentView.swift in Sources */,
-				F1D64DB22A8A70E40001014D /* ExerciseLog.swift in Sources */,
+				F1D64DB22A8A70E40001014D /* ExcerciseLog.swift in Sources */,
 				F1D64D7B2A8A6AF80001014D /* RunMethodApp.swift in Sources */,
 				F1DB2FF22AA4D365007F7686 /* ExecExcerciseView.swift in Sources */,
 			);
