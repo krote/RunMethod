@@ -13,10 +13,11 @@ class ExcerciseManager: NSObject, ObservableObject{
     @Published var status: exerciseStatus = .stop
     var timer = Timer()
     var locationManager: CLLocationManager?
-    var locationLogs:[CLLocation] = []
+//    var locationLogs:[CLLocation] = []
+    var excerciseLogs:[ExcerciseLog] = []
+    var currentExcerciseLog: ExcerciseLog?
     
     private let motionManager = CMMotionManager()
-    //var excerciseLog: ExcerciseLog
     struct motion_point{
         var timeElapsed: Double
         var location_x: Double
@@ -56,6 +57,7 @@ class ExcerciseManager: NSObject, ObservableObject{
             self.secondElapsed += 0.01
         }
         
+        currentExcerciseLog = ExcerciseLog()
         // 位置情報に関する初期処理
         locationLogs.removeAll()
         

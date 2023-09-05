@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import CoreMotion
+import SwiftUI
 
 class ExcerciseLog: NSObject{
     var startDateTime: Date
@@ -16,7 +18,8 @@ class ExcerciseLog: NSObject{
         var location_z: Double
     }
     var motionPoints: [motion_point] = []
-    
+    var locationLogs:[CLLocation] = []
+
     
     override init() {
         //
@@ -24,5 +27,8 @@ class ExcerciseLog: NSObject{
     }
     func addMotionPoint(time: Double, x:Double, y:Double, z:Double){
         motionPoints.append(motion_point(timeElapsed: time, location_x: x, location_y: y, location_z: z))
+    }
+    func addLocationLog(location: CLLocation){
+        
     }
 }
