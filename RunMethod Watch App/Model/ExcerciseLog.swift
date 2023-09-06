@@ -29,6 +29,6 @@ class ExcerciseLog: NSObject{
         motionPoints.append(motion_point(timeElapsed: time, location_x: x, location_y: y, location_z: z))
     }
     func addLocationLog(location: CLLocation){
-        
+        locationLogs.append(location)
     }
 }

@@ -13,7 +13,6 @@ class ExcerciseManager: NSObject, ObservableObject{
     @Published var status: exerciseStatus = .stop
     var timer = Timer()
     var locationManager: CLLocationManager?
-//    var locationLogs:[CLLocation] = []
     var excerciseLogs:[ExcerciseLog] = []
     var currentExcerciseLog: ExcerciseLog?
     
@@ -58,8 +57,6 @@ class ExcerciseManager: NSObject, ObservableObject{
         }
         
         currentExcerciseLog = ExcerciseLog()
-        // 位置情報に関する初期処理
-        locationLogs.removeAll()
         
         // デバイスのモーションセンサー値取得に関する処理
         startMonitoringMotion()
@@ -96,7 +93,7 @@ class ExcerciseManager: NSObject, ObservableObject{
                 let threshold: Double = 0.1
                 let userAcceleration = data.userAcceleration
                 if abs(userAcceleration.x) > threshold || abs(userAcceleration.y) > threshold || abs(userAcceleration.z) > threshold {
-                    self?.motionPoints.append(motion_point(timeElapsed: self?.secondElapsed ?? 0, location_x: userAcceleration.x, location_y: userAcceleration.y, location_z: userAcceleration.z))
+                    self?.currentExcerciseLog?.addMotionPoint(time: self?.secondElapsed ?? 0, x: userAcceleration.x, y: userAcceleration.y, z: userAcceleration.z)
                 }
             }
         }
@@ -121,10 +118,8 @@ extension ExcerciseManager: CLLocationManagerDelegate{
             return
         }
             
-        var cnt = locations.count
         if let newLocation = locations.last{
-            locationLogs.append(newLocation)
-            print("\(newLocation.coordinate.latitude), \(newLocation.coordinate.longitude)")
+            currentExcerciseLog?.addLocationLog(location: newLocation)
         }
     }
 }
