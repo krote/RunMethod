@@ -8,10 +8,14 @@
 import SwiftUI
 
 struct ShowExcerciseLogView: View {
-    let dataList:List<ExcerciseLog>
+    var dataList: [ExcerciseLog] = []
     
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    }
+    
+    func loadData(){
+        
     }
 }
 
