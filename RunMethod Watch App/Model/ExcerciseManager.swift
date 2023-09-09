@@ -8,9 +8,15 @@
 import SwiftUI
 import CoreMotion
 
+enum operationStatus{
+    case start
+    case stop
+    case pause
+}
+
 class ExcerciseManager: NSObject, ObservableObject{
     @Published var secondElapsed = 0.0
-    @Published var status: exerciseStatus = .stop
+    @Published var status: operationStatus = .stop
     var timer = Timer()
     var locationManager: CLLocationManager?
     var excerciseLogs:[ExcerciseLog] = []
@@ -23,22 +29,17 @@ class ExcerciseManager: NSObject, ObservableObject{
         
         // 位置情報を5m移動するたびにdelegateを呼び出すようにする
         locationManager = CLLocationManager()
-        locationManager!.desiredAccuracy = kCLLocationAccuracyBestForNavigation
-        locationManager!.distanceFilter = 5
+        guard let locationManager = locationManager else {
+            // 位置情報が取得できないのであれば以下は不要
+            return
+        }
+        locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+        locationManager.distanceFilter = 5
         
-        locationManager!.delegate = self
-        locationManager!.requestWhenInUseAuthorization()
-        locationManager!.allowsBackgroundLocationUpdates = true
-        
-        
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.allowsBackgroundLocationUpdates = true
     }
-    
-    enum exerciseStatus{
-        case start
-        case stop
-        case pause
-    }
-    
     /// 運動の開始
     func startExcercise(){
         status = .start
@@ -81,6 +82,8 @@ class ExcerciseManager: NSObject, ObservableObject{
     private func startMonitoringMotion(){
         if motionManager.isDeviceMotionAvailable {
             motionManager.deviceMotionUpdateInterval = 0.5
+            
+            // 動きに変化があった場合に記録する関数の定義
             motionManager.startDeviceMotionUpdates(to: .main) {[weak self] (data, error) in
                 guard let data = data else {return}
                 let threshold: Double = 0.1

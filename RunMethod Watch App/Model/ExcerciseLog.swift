@@ -9,8 +9,8 @@ import Foundation
 import CoreMotion
 import SwiftUI
 
+/// 運動に関するデータを管理するクラス
 class ExcerciseLog: NSObject{
-    var startDateTime: Date
     struct motion_point{
         var timeElapsed: Double
         var location_x: Double
@@ -20,15 +20,30 @@ class ExcerciseLog: NSObject{
     var motionPoints: [motion_point] = []
     var locationLogs:[CLLocation] = []
 
+    struct operationLog{
+        var operationTime: Date
+        var operationStatus: operationStatus
+    }
+    var operationLogs: [operationLog] = []
     
     override init() {
-        //
-        startDateTime = Date()
+        super.init()
+        // 開始時刻の記録
+        startLogging()
     }
     func addMotionPoint(time: Double, x:Double, y:Double, z:Double){
         motionPoints.append(motion_point(timeElapsed: time, location_x: x, location_y: y, location_z: z))
     }
     func addLocationLog(location: CLLocation){
         locationLogs.append(location)
+    }
+    func startLogging(){
+        operationLogs.append(operationLog(operationTime: Date(), operationStatus: .start))
+    }
+    func pauseLogging(){
+        operationLogs.append(operationLog(operationTime: Date(), operationStatus: .pause))
+    }
+    func endLogging(){
+        operationLogs.append(operationLog(operationTime: Date(), operationStatus: .stop))
     }
 }
