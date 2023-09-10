@@ -115,7 +115,10 @@ extension ExcerciseManager: CLLocationManagerDelegate{
         }
             
         if let newLocation = locations.last{
-            currentExcerciseLog?.addLocationLog(location: newLocation)
+            guard let currentLog = currentExcerciseLog else {
+                return
+            }
+            currentLog.addLocationLog(time: secondElapsed, location: newLocation)
         }
     }
 }
