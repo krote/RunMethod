@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ShowExcerciseLogView: View {
+struct ExcerciseLogListView: View {
     var dataList: [ExcerciseLog] = []
     
     var body: some View {
@@ -21,6 +21,6 @@ struct ShowExcerciseLogView: View {
 
 struct ShowExcerciseLogView_Previews: PreviewProvider {
     static var previews: some View {
-        ShowExcerciseLogView()
+        ExcerciseLogListView()
     }
 }
