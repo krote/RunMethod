@@ -10,12 +10,14 @@ import SwiftUI
 struct ExcerciseView: View {
     var excerciseLog: ExcerciseLog
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Text(excerciseLog.)
+        }
     }
 }
 
 struct ExcerciseView_Previews: PreviewProvider {
     static var previews: some View {
-        ExcerciseView(ExcerciseLog())
+        ExcerciseView(excerciseLog: ExcerciseLog())
     }
 }
