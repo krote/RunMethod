@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+let testData: ExcerciseLog = ExcerciseLog()
+
 struct ExcerciseLogListView: View {
     var dataList: [ExcerciseLog] = []
     

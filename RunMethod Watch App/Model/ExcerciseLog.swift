@@ -59,4 +59,14 @@ class ExcerciseLog: NSObject{
     func endLogging(){
         operationLogs.append(operationLog(operationTime: Date(), operationStatus: .stop))
     }
+    
+    func setTestData(){
+        //operationLogs
+        var dateTime = Date()
+        operationLogs.append(operationLog(operationTime: dateTime, operationStatus: .start))
+        dateTime = dateTime.addingTimeInterval(100)
+        operationLogs.append(operationLog(operationTime: dateTime, operationStatus: .pause))
+        dateTime = dateTime.addingTimeInterval(100)
+        operationLogs.append(operationLog(operationTime: dateTime, operationStatus: .stop))
+    }
 }
