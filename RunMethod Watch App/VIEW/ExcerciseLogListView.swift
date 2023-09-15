@@ -19,10 +19,16 @@ struct ExcerciseLogListView: View {
     func loadData(){
         
     }
+    
+    mutating func loadTestData(){
+        var testData = ExcerciseLog()
+        testData.setTestData()
+        dataList.append(testData)
+    }
 }
 
 struct ShowExcerciseLogView_Previews: PreviewProvider {
     static var previews: some View {
-        ExcerciseLogListView()
+        ExcerciseLogListView().loadTestData()
     }
 }
