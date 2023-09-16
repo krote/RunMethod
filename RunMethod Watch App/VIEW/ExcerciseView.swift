@@ -11,7 +11,7 @@ struct ExcerciseView: View {
     var excerciseLog: ExcerciseLog
     var body: some View {
         VStack{
-            Text(excerciseLog.)
+            Text("Total Distrance: \(excerciseLog.totalDistance)")
         }
     }
 }

@@ -35,8 +35,6 @@ class ExcerciseLog: NSObject{
     
     override init() {
         super.init()
-        // 開始時刻の記録
-        startLogging()
     }
     func addMotionPoint(time: Double, x:Double, y:Double, z:Double){
         motionPoints.append(motion_point(timeElapsed: time, motion_x: x, motion_y: y, motion_z: z))

@@ -50,7 +50,11 @@ class ExcerciseManager: NSObject, ObservableObject{
         }
         
         currentExcerciseLog = ExcerciseLog()
-        
+        guard let excerciseLog = currentExcerciseLog else{
+            return
+        }
+        excerciseLog.startLogging()
+
         // デバイスのモーションセンサー値取得に関する処理
         startMonitoringMotion()
     }

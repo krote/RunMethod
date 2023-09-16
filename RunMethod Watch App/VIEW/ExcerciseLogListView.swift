@@ -10,7 +10,7 @@ import SwiftUI
 let testData: ExcerciseLog = ExcerciseLog()
 
 struct ExcerciseLogListView: View {
-    var dataList: [ExcerciseLog] = []
+    @State var dataList: [ExcerciseLog] = []
     
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
@@ -20,7 +20,7 @@ struct ExcerciseLogListView: View {
         
     }
     
-    mutating func loadTestData(){
+    func loadTestData(){
         var testData = ExcerciseLog()
         testData.setTestData()
         dataList.append(testData)
@@ -29,6 +29,6 @@ struct ExcerciseLogListView: View {
 
 struct ShowExcerciseLogView_Previews: PreviewProvider {
     static var previews: some View {
-        ExcerciseLogListView().loadTestData()
+        ExcerciseLogListView()
     }
 }
