@@ -28,6 +28,7 @@
 		F1DB2FF22AA4D365007F7686 /* ExecExcerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DB2FF12AA4D365007F7686 /* ExecExcerciseView.swift */; };
 		F1DB2FF42AA4D540007F7686 /* ExcerciseLogListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DB2FF32AA4D540007F7686 /* ExcerciseLogListView.swift */; };
 		F1DB2FF62AAF48AC007F7686 /* ExcerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DB2FF52AAF48AC007F7686 /* ExcerciseView.swift */; };
+		F1DB2FF92AB7158A007F7686 /* ExcerciseModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F1DB2FF72AB7158A007F7686 /* ExcerciseModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,7 @@
 		F1DB2FF12AA4D365007F7686 /* ExecExcerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecExcerciseView.swift; sourceTree = "<group>"; };
 		F1DB2FF32AA4D540007F7686 /* ExcerciseLogListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcerciseLogListView.swift; sourceTree = "<group>"; };
 		F1DB2FF52AAF48AC007F7686 /* ExcerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcerciseView.swift; sourceTree = "<group>"; };
+		F1DB2FF82AB7158A007F7686 /* ExcerciseModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExcerciseModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +232,7 @@
 				F1D64D7C2A8A6AF80001014D /* ContentView.swift */,
 				F1D64D7E2A8A6AF90001014D /* Assets.xcassets */,
 				F1D64D802A8A6AF90001014D /* Preview Content */,
+				F1DB2FF72AB7158A007F7686 /* ExcerciseModel.xcdatamodeld */,
 			);
 			path = "RunMethod Watch App";
 			sourceTree = "<group>";
@@ -530,6 +533,7 @@
 				F1D64DB02A8A70500001014D /* UserData.swift in Sources */,
 				F1DB2FF42AA4D540007F7686 /* ExcerciseLogListView.swift in Sources */,
 				F1D64DB42A8D0F060001014D /* ExcerciseManager.swift in Sources */,
+				F1DB2FF92AB7158A007F7686 /* ExcerciseModel.xcdatamodeld in Sources */,
 				F1D64D7D2A8A6AF80001014D /* ContentView.swift in Sources */,
 				F1DB2FF62AAF48AC007F7686 /* ExcerciseView.swift in Sources */,
 				F1D64DB22A8A70E40001014D /* ExcerciseLog.swift in Sources */,
@@ -703,6 +707,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RunMethod Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = N333ZUH33B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "RunMethod-Watch-App-Info.plist";
@@ -733,6 +738,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RunMethod Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = N333ZUH33B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "RunMethod-Watch-App-Info.plist";
@@ -1050,6 +1056,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F1DB2FF72AB7158A007F7686 /* ExcerciseModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F1DB2FF82AB7158A007F7686 /* ExcerciseModel.xcdatamodel */,
+			);
+			currentVersion = F1DB2FF82AB7158A007F7686 /* ExcerciseModel.xcdatamodel */;
+			path = ExcerciseModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F1D64D472A8A6AF70001014D /* Project object */;
 }
