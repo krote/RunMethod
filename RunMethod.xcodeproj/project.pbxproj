@@ -112,6 +112,7 @@
 		F1DB2FF32AA4D540007F7686 /* ExcerciseLogListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcerciseLogListView.swift; sourceTree = "<group>"; };
 		F1DB2FF52AAF48AC007F7686 /* ExcerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcerciseView.swift; sourceTree = "<group>"; };
 		F1DB2FF82AB7158A007F7686 /* ExcerciseModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExcerciseModel.xcdatamodel; sourceTree = "<group>"; };
+		F1DB2FFA2AB899B4007F7686 /* RunMethod Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "RunMethod Watch App.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +226,7 @@
 		F1D64D792A8A6AF80001014D /* RunMethod Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				F1DB2FFA2AB899B4007F7686 /* RunMethod Watch App.entitlements */,
 				F1DB2FF02AA4D314007F7686 /* VIEW */,
 				F1DB2FEF2A964E2A007F7686 /* RunMethod-Watch-App-Info.plist */,
 				F1D64DAE2A8A6FF90001014D /* Model */,
@@ -704,6 +706,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "RunMethod Watch App/RunMethod Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RunMethod Watch App/Preview Content\"";
@@ -735,6 +738,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "RunMethod Watch App/RunMethod Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RunMethod Watch App/Preview Content\"";
