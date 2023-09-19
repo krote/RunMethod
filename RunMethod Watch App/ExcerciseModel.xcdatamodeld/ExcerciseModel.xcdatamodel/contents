@@ -8,6 +8,7 @@
     </entity>
     <entity name="ExcercisePointData" representedClassName="ExcercisePointData" syncable="YES" codeGenerationType="class">
         <attribute name="pointDateTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="pointDistance" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="pointLatitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="pointLongtitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
     </entity>
