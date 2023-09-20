@@ -29,6 +29,10 @@
 		F1DB2FF42AA4D540007F7686 /* ExcerciseLogListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DB2FF32AA4D540007F7686 /* ExcerciseLogListView.swift */; };
 		F1DB2FF62AAF48AC007F7686 /* ExcerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DB2FF52AAF48AC007F7686 /* ExcerciseView.swift */; };
 		F1DB2FF92AB7158A007F7686 /* ExcerciseModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F1DB2FF72AB7158A007F7686 /* ExcerciseModel.xcdatamodeld */; };
+		F1DB2FFF2ABB2D06007F7686 /* ExcerciseData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DB2FFB2ABB2D06007F7686 /* ExcerciseData+CoreDataClass.swift */; };
+		F1DB30002ABB2D06007F7686 /* ExcerciseData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DB2FFC2ABB2D06007F7686 /* ExcerciseData+CoreDataProperties.swift */; };
+		F1DB30012ABB2D06007F7686 /* ExcercisePointData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DB2FFD2ABB2D06007F7686 /* ExcercisePointData+CoreDataClass.swift */; };
+		F1DB30022ABB2D06007F7686 /* ExcercisePointData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DB2FFE2ABB2D06007F7686 /* ExcercisePointData+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +117,10 @@
 		F1DB2FF52AAF48AC007F7686 /* ExcerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcerciseView.swift; sourceTree = "<group>"; };
 		F1DB2FF82AB7158A007F7686 /* ExcerciseModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExcerciseModel.xcdatamodel; sourceTree = "<group>"; };
 		F1DB2FFA2AB899B4007F7686 /* RunMethod Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "RunMethod Watch App.entitlements"; sourceTree = "<group>"; };
+		F1DB2FFB2ABB2D06007F7686 /* ExcerciseData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ExcerciseData+CoreDataClass.swift"; path = "RunMethod Watch App/Model/ExcerciseData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F1DB2FFC2ABB2D06007F7686 /* ExcerciseData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ExcerciseData+CoreDataProperties.swift"; path = "RunMethod Watch App/Model/ExcerciseData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F1DB2FFD2ABB2D06007F7686 /* ExcercisePointData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ExcercisePointData+CoreDataClass.swift"; path = "RunMethod Watch App/Model/ExcercisePointData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F1DB2FFE2ABB2D06007F7686 /* ExcercisePointData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ExcercisePointData+CoreDataProperties.swift"; path = "RunMethod Watch App/Model/ExcercisePointData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +172,10 @@
 		F1D64D462A8A6AF70001014D = {
 			isa = PBXGroup;
 			children = (
+				F1DB2FFB2ABB2D06007F7686 /* ExcerciseData+CoreDataClass.swift */,
+				F1DB2FFC2ABB2D06007F7686 /* ExcerciseData+CoreDataProperties.swift */,
+				F1DB2FFD2ABB2D06007F7686 /* ExcercisePointData+CoreDataClass.swift */,
+				F1DB2FFE2ABB2D06007F7686 /* ExcercisePointData+CoreDataProperties.swift */,
 				F1D64D512A8A6AF70001014D /* RunMethod */,
 				F1D64D622A8A6AF80001014D /* RunMethodTests */,
 				F1D64D6C2A8A6AF80001014D /* RunMethodUITests */,
@@ -532,9 +544,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1DB30012ABB2D06007F7686 /* ExcercisePointData+CoreDataClass.swift in Sources */,
+				F1DB30022ABB2D06007F7686 /* ExcercisePointData+CoreDataProperties.swift in Sources */,
 				F1D64DB02A8A70500001014D /* UserData.swift in Sources */,
+				F1DB30002ABB2D06007F7686 /* ExcerciseData+CoreDataProperties.swift in Sources */,
 				F1DB2FF42AA4D540007F7686 /* ExcerciseLogListView.swift in Sources */,
 				F1D64DB42A8D0F060001014D /* ExcerciseManager.swift in Sources */,
+				F1DB2FFF2ABB2D06007F7686 /* ExcerciseData+CoreDataClass.swift in Sources */,
 				F1DB2FF92AB7158A007F7686 /* ExcerciseModel.xcdatamodeld in Sources */,
 				F1D64D7D2A8A6AF80001014D /* ContentView.swift in Sources */,
 				F1DB2FF62AAF48AC007F7686 /* ExcerciseView.swift in Sources */,
