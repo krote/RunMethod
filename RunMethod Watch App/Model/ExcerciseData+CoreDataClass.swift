@@ -2,7 +2,7 @@
 //  ExcerciseData+CoreDataClass.swift
 //  RunMethod Watch App
 //
-//  Created by to-matsushita on 2023/09/20.
+//  Created by krote on 2023/09/20.
 //
 //
 

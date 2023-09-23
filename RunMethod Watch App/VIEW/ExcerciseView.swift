@@ -2,7 +2,7 @@
 //  ExcerciseView.swift
 //  RunMethod Watch App
 //
-//  Created by to-matsushita on 2023/09/11.
+//  Created by krote on 2023/09/11.
 //
 
 import SwiftUI

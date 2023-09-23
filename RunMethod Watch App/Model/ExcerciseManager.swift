@@ -2,7 +2,7 @@
 //  ExcerciseManager.swift
 //  RunMethod Watch App
 //
-//  Created by to-matsushita on 2023/08/16.
+//  Created by krote on 2023/08/16.
 //
 
 import SwiftUI

@@ -2,7 +2,7 @@
 //  RunMethodTests.swift
 //  RunMethodTests
 //
-//  Created by to-matsushita on 2023/08/14.
+//  Created by krote on 2023/08/14.
 //
 
 import XCTest
